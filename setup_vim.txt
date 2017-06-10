@@ -1,0 +1,16 @@
+sudo apt-get install vim
+
+# https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+
+mkdir -p ~/.vim/autoload 
+curl 'www.vim.org/scripts/download_script.php?src_id=19375' > ~/.vim/autoload/pathogen.vim
+
+mkdir -p ~/.vim/bundle
+cd ~/.vim/bundle
+git clone https://github.com/fholgado/minibufexpl.vim.git
+git clone git://github.com/altercation/vim-colors-solarized.git
+
+#gnome terminal solarized
+#https://github.com/Anthony25/gnome-terminal-colors-solarized
+#https://github.com/seebi/dircolors-solarized
+
