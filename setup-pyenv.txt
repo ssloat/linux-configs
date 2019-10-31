@@ -1,0 +1,14 @@
+# https://github.com/pyenv/pyenv/wiki/common-build-problems
+sudo yum install @development zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
+
+
+curl https://pyenv.run | bash
+
+pyenv install -list
+pyenv install 3.7.4
+pyenv versions
+
+pyenv virtualenv 3.7.4 discord
+cd {directory}
+pyenv local discord
+

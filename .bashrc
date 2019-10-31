@@ -6,7 +6,8 @@ TERM=screen-256color
 #TERM=konsole-256color
 PYTHONPATH=/home/stephen/git/budget:/home/stephen/git/flask_user
 VIMRUNTIME=/home/stephen/.vim
-PATH=/home/stephen/google_appengine:/opt/scala/scala-2.12.1/bin:/opt/gradle/gradle-3.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+#PATH=/home/stephen/google_appengine:/opt/scala/scala-2.12.1/bin:/opt/gradle/gradle-3.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+PATH=/opt/java/jdk1.8.0_161/bin:/home/stephen/google_appengine:/opt/scala/scala-2.12.1/bin:/opt/gradle/gradle-3.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 #for d in `find /home/stephen/git -name python -type d`
 #do
@@ -103,7 +104,11 @@ gg() { grep -i $1 `find . -name "*.py" -o -name "*.html"`; }
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-source /usr/local/bin/virtualenvwrapper.sh 
+# UBUNTU i
+#source /usr/local/bin/virtualenvwrapper.sh 
+
+# REDHAT
+source /usr/bin/virtualenvwrapper.sh 
 
 PI="192.168.1.29"
 
@@ -134,3 +139,9 @@ if [ -f '/home/stephen/google-cloud-sdk/path.bash.inc' ]; then source '/home/ste
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/stephen/google-cloud-sdk/completion.bash.inc' ]; then source '/home/stephen/google-cloud-sdk/completion.bash.inc'; fi
+
+
+export PATH="/home/kona/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
